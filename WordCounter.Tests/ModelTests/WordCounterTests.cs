@@ -48,6 +48,13 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(1, result);
     }
-
+    [TestMethod]
+    public void CountWords_WordInTheMiddleOfSentenceWithSpacesBeforeAndAfter_1()
+    {
+      string word = "cat";
+      string sentence = "I have a cat and a dog.";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
   }
 }
