@@ -20,7 +20,19 @@ namespace WordCounter.Models
       char[] arrWord = SplitToArray(word);
       char[] arrSentence = SplitToArray(sentence);
 
-      return -1;
+      int result = 0;
+      int matchingLetters = 0;
+      for(int i = 0; i < arrSentence.Length; i++)
+      {
+        if(arrSentence[i] == arrWord[i])
+        {
+          matchingLetters ++;
+        }
+      }
+
+      if (matchingLetters == arrWord.Length)
+        result++;
+      return result;
     }
 
   }
