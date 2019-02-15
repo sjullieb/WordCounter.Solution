@@ -64,5 +64,13 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void CountWords_2WordsInTheMiddleOfSentence_2()
+    {
+      string word = "cat";
+      string sentence = "I have a cat and another cat.";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(2, result);
+    }
   }
 }
