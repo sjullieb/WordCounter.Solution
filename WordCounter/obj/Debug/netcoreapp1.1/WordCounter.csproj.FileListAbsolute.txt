@@ -1,0 +1,7 @@
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.deps.json
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.csproj.CoreCompileInputs.cache
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.AssemblyInfo.cs
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.dll
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.pdb
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.dll
+C:\Projects\Epicodus\C#\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.pdb
