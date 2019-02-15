@@ -28,6 +28,10 @@ The program uses the following specifications:_
   - Example Input Word: "cat"
   - Example Input Sentence: "Cat is fat"    
   - Example Output: 1  
+* _The program returns 1, if the sentence starts with the word, and one of punctuation marks is following the word._
+  - Example Input Word: "cat"
+  - Example Input Sentence: "Cat? It is fat"    
+  - Example Output: 1  
 * _The program returns 1, if the word appears once with spaces before and after._
   - Example Input Word: "cat"
   - Example Input Sentence: "I have a cat and a dog."  

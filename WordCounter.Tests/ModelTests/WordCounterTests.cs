@@ -32,6 +32,22 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void CountWords_WordAtBeginningOfSentenceWithSpaceAfter_1()
+    {
+      string word = "cat";
+      string sentence = "Cat is fat";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void CountWords_WordAtBeginningOfSentenceWithPunctuationAfter_1()
+    {
+      string word = "cat";
+      string sentence = "Cat? It is fat";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
 
   }
 }
