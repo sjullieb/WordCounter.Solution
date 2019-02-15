@@ -40,6 +40,10 @@ The program uses the following specifications:_
   - Example Input Word: "cat"
   - Example Input Sentence: "Do you have a cat?"
   - Example Output: 1
+* _The program returns 2, if the word appears twice with spaces before and after._
+  - Example Input Word: "cat"
+  - Example Input Sentence: "I have a cat and another cat."  
+  - Example Output: 2    
 * _The program returns 1, if the word appears once with "(" before and one of punctuation marks .,:;!?'") after._
   - Example Input Word: "cat"
   - Example Input Sentence: "I have a pet (cat)."  

@@ -56,5 +56,13 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void CountWords_WordsWithSpaceBeforeAndPunctuationMarkAfter_1()
+    {
+      string word = "cat";
+      string sentence = "Do you have a cat?";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
   }
 }
