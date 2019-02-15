@@ -13,7 +13,7 @@ namespace WordCounter.Models
 
     public static int CountWords(string word, string sentence)
     {
-      if (word.Length == 0)
+      if ((word.Length == 0) || (sentence.Length == 0))
       {
         return 0;
       }

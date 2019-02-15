@@ -16,6 +16,14 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(0, result);
     }
+    [TestMethod]
+    public void CountWords_EmptySentence_0()
+    {
+      string word = "cat";
+      string sentence = "";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
 
   }
 }
