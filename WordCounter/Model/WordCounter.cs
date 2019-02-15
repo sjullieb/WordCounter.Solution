@@ -28,7 +28,7 @@ namespace WordCounter.Models
 
       for(int i = 0; i < arrSentence.Length; i++)
       {
-        if (arrSentence[i] == ' ') // end of the current word in the sentence
+        if ((arrSentence[i] == ' ') || (Array.IndexOf(punctuationMarks, arrSentence[i]) > -1)) // end of the current word in the sentence
         {
 
           if ((wordIndex == arrWord.Length)) // full word found
@@ -63,7 +63,7 @@ namespace WordCounter.Models
         }
       }
 
-      if (matchingLetters == arrWord.Length)
+      if (wordIndex == arrWord.Length)
         result++;
       return result;
     }
