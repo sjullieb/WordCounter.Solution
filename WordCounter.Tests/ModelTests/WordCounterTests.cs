@@ -96,6 +96,21 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(1, result);
     }
-
+    [TestMethod]
+    public void CountWords_WordAtTheEndOfSentenceWithSpaceBefore_1()
+    {
+      string word = "cat";
+      string sentence = "I have a cat";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void CountWords_NonAlphabeticSymbolAfterWord_0()
+    {
+      string word = "cat";
+      string sentence = "cat+dog=fight;";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
   }
 }
