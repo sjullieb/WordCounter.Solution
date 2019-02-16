@@ -46,7 +46,12 @@ namespace WordCounter.Models
         {
           if((searchInProgress) || (startChecking))
           {
-            if(arrSentence[i] == arrWord[wordIndex])
+            if (wordIndex == arrWord.Length) // target word is a beginning of another word
+            {
+              searchInProgress = false;
+              wordIndex = 0;
+            }
+            else if(arrSentence[i] == arrWord[wordIndex])
              {
                wordIndex++;
                startChecking = false;
