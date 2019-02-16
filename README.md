@@ -44,6 +44,10 @@ The program uses the following specifications:_
   - Example Input Word: "cat"
   - Example Input Sentence: "I have a cat and another cat."  
   - Example Output: 2    
+* _The program returns 0, if the word is a part of another word._
+  - Example Input Word: "cat"
+  - Example Input Sentence: "Concatenate this strings."  
+  - Example Output: 0    
 * _The program returns 1, if the word appears once with "(" before and one of punctuation marks .,:;!?'") after._
   - Example Input Word: "cat"
   - Example Input Sentence: "I have a pet (cat)."  

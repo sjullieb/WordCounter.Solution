@@ -26,6 +26,7 @@ namespace WordCounter.Models
       bool startChecking = true;
       bool searchInProgress = false;
 
+      Console.WriteLine("{0}", sentence);
       for(int i = 0; i < arrSentence.Length; i++)
       {
         if ((arrSentence[i] == ' ') || (Array.IndexOf(punctuationMarks, arrSentence[i]) > -1)) // end of the current word in the sentence
@@ -33,6 +34,8 @@ namespace WordCounter.Models
 
           if ((wordIndex == arrWord.Length)) // full word found
           {
+            Console.WriteLine("position {0} in {1}", i, sentence);
+
             result++;
           }
           wordIndex = 0;
@@ -48,7 +51,6 @@ namespace WordCounter.Models
                wordIndex++;
                startChecking = false;
                searchInProgress = true;
-               Console.WriteLine("i = {0}", i);
              }
              else
              {

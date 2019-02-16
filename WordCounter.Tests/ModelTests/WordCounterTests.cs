@@ -72,5 +72,13 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(2, result);
     }
+    [TestMethod]
+    public void CountWords_WordIsPartOfAnotherWord_0()
+    {
+      string word = "cat";
+      string sentence = "Concatenate this strings.";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
   }
 }
