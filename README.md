@@ -62,13 +62,13 @@ The program uses the following specifications:_
   - Example Output: 1  
 * _The program returns 0, if the sentence contains the word with a space before and non-alphabetic symbol after excluding punctuation marks .,:;!?'"._
   - Example Input Word: "cat"
-  - Example Input Sentence: "cat1 = new Cat();"
+  - Example Input Sentence: "cat+dog=fight"
   - Example Output: 0
+* _The program returns 3, if it's a single-letter word which appears 3 times._
+  - Example Input Word: "a"
+  - Example Input Sentence: "I have a cat, a god and a fish."  
+  - Example Output: 3  
 
-* _The program returns 0, if the word is a part of another word._
-  - Example Input Word: "cat"
-  - Example Input Sentence: "scatter"
-  - Example Output: 0    
 
 ## Setup/Installation Requirements
 

@@ -112,5 +112,22 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(0, result);
     }
+    [TestMethod]
+    public void CountWords_MoreNonAlphabeticSymbolsAfterWord_0()
+    {
+      string word = "cat";
+      string sentence = "cat1 = new Cat();";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
+    [TestMethod]
+    public void CountWords_MultipleSingleLetterWords_3()
+    {
+      string word = "a";
+      string sentence = "I have a cat, a god and a fish.";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(3, result);
+    }
+
   }
 }
