@@ -88,6 +88,14 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(0, result);
     }
+    [TestMethod]
+    public void CountWords_OpeningRoundBracketBeforeWord_1()
+    {
+      string word = "cat";
+      string sentence = "I have many pets (cat, dog, fish).";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(1, result);
+    }
 
   }
 }
