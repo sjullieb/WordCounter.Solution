@@ -72,7 +72,7 @@ The program uses the following specifications:_
 
 ## Setup/Installation Requirements
 
-* _Please visit the GitHub repository for this project at "https://github.com/sjullieb/csharp-word-counter"_
+* _Please visit the GitHub repository for this project at "https://github.com/sjullieb/WordCounter.Solution"_
 * _Clone repository or download to desktop_
 
 ## Known Bugs
@@ -86,6 +86,9 @@ _If you run into any issues or have questions, ideas or concerns. Please email m
 ## Technologies Used
 
 * _C#_
+* _.NET Core_
+* _Mono_
+* _MSTest_
 
 ### License
 
