@@ -97,6 +97,14 @@ namespace WordCounter.Tests
       Assert.AreEqual(1, result);
     }
     [TestMethod]
+    public void CountWords_OpeningRoundBracketAndLetterBeforeWord_1()
+    {
+      string word = "cat";
+      string sentence = "I have many pets (scat, dog, fish).";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
+    [TestMethod]
     public void CountWords_WordAtTheEndOfSentenceWithSpaceBefore_1()
     {
       string word = "cat";
@@ -128,6 +136,13 @@ namespace WordCounter.Tests
       int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
       Assert.AreEqual(3, result);
     }
-
+    [TestMethod]
+    public void CountWords_MultipleConcatenatedWords_0()
+    {
+      string word = "cat";
+      string sentence = "catcatcat ";
+      int result = WordCounter.Models.RepeatCounter.CountWords(word, sentence);
+      Assert.AreEqual(0, result);
+    }
   }
 }

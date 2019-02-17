@@ -14,7 +14,37 @@ namespace WordCounter.Models
 
     public static int CountWords(string word, string sentence)
     {
-      if ((word.Length == 0) || (sentence.Length == 0))
+      int result = 0;
+      string uWord = word.ToUpper();
+      string uSentence = sentence.ToUpper();
+
+      if ((uWord.Length == 0) || (uSentence.Length == 0))
+      {
+        return 0;
+      }
+
+      int wordIndex = uSentence.IndexOf(uWord);
+      while(wordIndex > -1) // word found
+      {
+        // first word or spase or opening bracket before
+        if ((wordIndex == 0) || ((wordIndex > 0) && ((uSentence[wordIndex - 1] == ' ') || (uSentence[wordIndex - 1] == '('))))
+        {
+          if (wordIndex + uWord.Length == uSentence.Length) // last word in sentence
+            result++;
+          else if (wordIndex + uWord.Length < uSentence.Length)
+          {
+            char nextLetter = (uSentence[wordIndex + uWord.Length]);
+            if ((nextLetter == ' ') || (Array.IndexOf(punctuationMarks, nextLetter) > -1))
+            {
+              result++;
+            }
+          }
+        }
+        wordIndex = uSentence.IndexOf(uWord, wordIndex + uWord.Length);
+      }
+      Console.WriteLine("{0} {1}", uSentence, result);
+      return result;
+/*      if ((word.Length == 0) || (sentence.Length == 0))
       {
         return 0;
       }
@@ -70,7 +100,8 @@ namespace WordCounter.Models
 
       if (wordIndex == arrWord.Length)
         result++;
-      return result;
+
+      return result;*/
     }
 
   }
