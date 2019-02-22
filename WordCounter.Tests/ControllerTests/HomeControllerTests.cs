@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.ASPNetCore.MVC;
+using Microsoft.AspNetCore.Mvc;
 using WordCounterProject.Models;
 using WordCounterProject.Controllers;
 
-namespace WordCounterProject.Tests;
+namespace WordCounterProject.Tests
 {
   [TestClass]
   public class HomeControllerTest
