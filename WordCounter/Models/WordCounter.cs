@@ -4,7 +4,34 @@ namespace WordCounterProject.Models
 {
   public class RepeatCounter
   {
+    private string Word;
+    private string Sentence;
+    private int Repeatitions;
+    private int Id;
+
+    private static int IdCounter = 0;
+    private static List<RepeatCounter> Instances = new List<RepeatCounter>{};
     private static char[] punctuationMarks = {'\"', '.', ',', ':', ';', '!', '?', '\'', ')'};
+
+    public RepeatCounter(string word, string sentence)
+    {
+      Word = word;
+      Sentence = sentence;
+      IdCounter++;
+      Id = IdCounter;
+      Instances.Add(this);
+      Repeatitions = CountWords(Word, Sentence);
+    }
+
+    public static List<RepeatCounter> GetAll()
+    {
+      return Instances;
+    }
+
+    public int GetRepetiotionsNumber()
+    {
+      return Repeatitions;
+    }
 
     private static char[] SplitToArray(string str)
     {
