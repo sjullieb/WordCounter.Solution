@@ -3,7 +3,7 @@ using WordCounterProject.Models;
 
 namespace WordCounterProject.Controllers
 {
-  public class CountersController: Controller
+  public class WordCounterController: Controller
   {
     [HttpGet("/counters")]
     public ActionResult Index()
