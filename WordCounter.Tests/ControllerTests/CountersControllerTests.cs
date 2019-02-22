@@ -6,13 +6,13 @@ using WordCounterProject.Controllers;
 namespace WordCounterProject.Tests
 {
   [TestClass]
-  public class WordCounterControllerTest
+  public class CounterControllerTest
   {
     [TestMethod]
-    public void Index_ReturnsCorrectView_True()
+    public void New_ReturnsCorrectView_True()
     {
-      WordCounterController controller = new WordCounterController();
-      ActionResult resultView = controller.Index();
+      CountersController controller = new CountersController();
+      ActionResult resultView = controller.New();
       Assert.IsInstanceOfType(resultView, typeof(ViewResult));
     }
   }

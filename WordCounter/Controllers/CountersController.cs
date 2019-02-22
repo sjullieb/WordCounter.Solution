@@ -3,11 +3,12 @@ using WordCounterProject.Models;
 
 namespace WordCounterProject.Controllers
 {
-  public class WordCounterController: Controller
+  public class CountersController: Controller
   {
-    [HttpGet("/wordcounters")]
-    public ActionResult Index()
+    [HttpGet("/counters/new")]
+    public ActionResult New()
     {
+    //  return new EmptyResult();
       return View();
     }
   }
