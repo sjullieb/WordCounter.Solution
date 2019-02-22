@@ -5,10 +5,15 @@ namespace WordCounterProject.Controllers
 {
   public class CountersController: Controller
   {
+    [HttpGet("/counters")]
+    public ActionResult Index()
+    {
+      return View(RepeatCounter.GetAll());
+    }
+
     [HttpGet("/counters/new")]
     public ActionResult New()
     {
-    //  return new EmptyResult();
       return View();
     }
   }
