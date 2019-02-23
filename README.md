@@ -1,12 +1,12 @@
 # _Word Counter_
 
-#### _A console application that checks how frequently a word appears in a sentence, Created 2/15/2019_
+#### _A web application that checks how frequently a word appears in a sentence, Created 2/15/2019_
 
 #### By _**Yulia Shidlovskaya**_
 
 ## Description
 
-_A program that allows a user to input a single word and a phrase. Then it checks how many times the word appears in the sentence.
+_A web application that allows a user to input a single word and a phrase. Then it checks how many times the word appears in the sentence. The application keeps track and shows the list of all previous counts.
 
 The program uses the following specifications:_
 
@@ -74,13 +74,13 @@ The program uses the following specifications:_
 
 Requirements Software:
 
-* Download .NET Core 1.1.4 SDK and .NET Core Runtime 1.1.2 and install them. 
+* Download .NET Core 1.1.4 SDK, .NET Core Runtime 1.1.2, .NET Core static files middleware 1.1.3 and install them.
 * Download Mono and install it.
 
 1. Clone this repository: $ git clone repo name
-2. Change into the work directory:: $ cd WordCounter.Solution
+2. Change into the work directory: $ cd WordCounter.Solution
 3. To edit the project, open the project in your preferred text editor.
-4. To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;
+4. To set up the server, use commands: $ dotnet restore $ dotnet build $ dotnet run
 5. To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
 ## Known Bugs
