@@ -28,9 +28,36 @@ namespace WordCounterProject.Models
       return Instances;
     }
 
+    public string GetWord()
+    {
+      return Word;
+    }
+
+    public string GetSentence()
+    {
+      return Sentence;
+    }
+
     public int GetRepetiotionsNumber()
     {
       return Repeatitions;
+    }
+
+    public static RepeatCounter Find(int id)
+    {
+      foreach(RepeatCounter counter in Instances)
+      {
+        if(counter.Id == id)
+        {
+          return counter;
+        }
+      }
+      return null;
+    }
+
+    public static void ClearAll()
+    {
+      Instances.Clear();
     }
 
     private static char[] SplitToArray(string str)
