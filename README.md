@@ -6,9 +6,9 @@
 
 ## Description
 
-_A web application that allows a user to input a single word and a phrase. Then it checks how many times the word appears in the sentence. The application keeps track and shows the list of all previous counts.
+_A web application that allows a user to input a single word and a phrase. Then it checks how many times the word appears in the sentence. The application keeps track and shows the list of all previous counts._
 
-The program uses the following specifications:_
+_The program uses the following specifications:_
 
 * _The program receives a word and a sentence from a user._
 * _The program recognizes upper case and lower case letter as the same letter._
