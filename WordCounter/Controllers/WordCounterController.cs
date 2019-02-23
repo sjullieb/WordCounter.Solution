@@ -21,7 +21,7 @@ namespace WordCounterProject.Controllers
     }
 
     [HttpPost("/counters")]
-    public ActionResult Index(string word, string sentence)
+    public ActionResult Create(string word, string sentence)
     {
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
       Dictionary<string, object> model = new Dictionary<string, object>();

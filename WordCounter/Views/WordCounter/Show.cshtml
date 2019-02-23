@@ -1,7 +1,12 @@
-<h1>Count results</h1>
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+  <h1>Count results</h1>
 
-<p>Word: @Model.GetWord()</p>
-<p>Sentence: @Model.GetSentence()</p>
-<p>Number of repetitions: @Model.GetRepetiotionsNumber()</p>
+  <p>Word: @Model.GetWord()</p>
+  <p>Sentence: @Model.GetSentence()</p>
+  <p>Number of repetitions: @Model.GetRepetiotionsNumber()</p>
 
-<a href="/counters">Go back to the Word Counter</a>
+  <a href="/counters">Go back to the Word Counter</a>
+</div>

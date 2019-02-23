@@ -1,12 +1,18 @@
-<h3>Fill in the fields:</h3>
-<form action="/counters" method="post">
-  <label for="word">Word:</label>
-  <input id="word" name="word" type="text">
-  <br>
-  <label for="sentence">Sentence:</label>
-  <input id="sentence" name="sentence" type="text">
-  <br>
-  <button type="submit">Count words!</button>
-</form>
-
-<a href="/counters">Go back to the Word Counter</a>
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+  <h3>Fill in the fields</h3>
+  <form action="/counters" method="post">
+    <div class="form-group">
+      <label for="word">Word</label>
+      <input id="word" name="word" class="form-control" type="text" required>
+      <br>
+      <label for="sentence">Sentence</label>
+      <textarea rows=5 id="sentence" name="sentence" class="form-control" required></textarea>
+      <br>
+      <button type="submit" class="btn btn-origin">Count words!</button>
+    </div>
+  </form>
+  <a href="/counters">Go back to the Word Counter</a>
+</div>

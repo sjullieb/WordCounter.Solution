@@ -1,20 +1,31 @@
+@{
+  Layout = "_Layout";
+}
 @using WordCounterProject.Models;
-<h1>Word Counter</h1>
-@if(Model.ContainsKey("new"))
-{
-<h2>You last count</h2>
-<h3><strong>Word: @Model["new"].GetWord()</strong></h3>
-<h3><strong>Sentence: @Model["new"].GetSentence()</strong></h3>
-<h3><strong>Number of repetitions: @Model["new"].GetRepetiotionsNumber()</strong></h3>
-<br>
-<h2>Previous counts:</h2>
-}
-@foreach (RepeatCounter counter in Model["all"])
-{
-<p>@counter.GetWord()<br>
-@counter.GetSentence()<br>
-@counter.GetRepetiotionsNumber()<br></p>
-<p><a href='/counters/@counter.GetId()'>Show</a></p>
-}
-<br>
-<a href="/counters/new">Count another word in a sentence.</a>
+
+<div class="container">
+  @if(Model.ContainsKey("new"))
+  {
+  <h2>Results</h2>
+  <p>Word: <strong>@Model["new"].GetWord()</strong></p>
+  <p>Sentence: <strong>@Model["new"].GetSentence()</strong></p>
+  <p>Number of times word appears: <strong>@Model["new"].GetRepetiotionsNumber()</strong></p>
+  <br>
+  }
+  @if(Model["all"].Count != 0)
+  {
+  <h2>All counts</h2>
+  }
+  @if(Model["all"].Count == 0)
+  {
+  <h2>No counts yet</h2>
+  }
+
+  @foreach (RepeatCounter counter in Model["all"])
+  {
+  <p> The word "@counter.GetWord()" appears in sentence "@counter.GetSentence()" @counter.GetRepetiotionsNumber() times</p>
+  <p><a href='/counters/@counter.GetId()'>Show</a></p>
+  }
+  <br>
+  <a href="/counters/new">Count another word in a sentence</a>
+</div>

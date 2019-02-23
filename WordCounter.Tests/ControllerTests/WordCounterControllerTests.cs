@@ -47,10 +47,10 @@ namespace WordCounterProject.Tests
       Assert.IsInstanceOfType(result, typeof(RepeatCounter));
     }
     [TestMethod]
-    public void Index_AddNewRepeatCounter_True()
+    public void Create_AddNewRepeatCounter_True()
     {
       int oldNumberOfCounters = RepeatCounter.GetAll().Count;
-      ActionResult result = new WordCounterController().Index("cat", "This is a cat");
+      ActionResult result = new WordCounterController().Create("cat", "This is a cat");
       Assert.AreEqual(oldNumberOfCounters + 1, RepeatCounter.GetAll().Count);
     }
 
