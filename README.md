@@ -81,7 +81,8 @@ Requirements Software:
 2. Change into the work directory: $ cd WordCounter.Solution
 3. To edit the project, open the project in your preferred text editor.
 4. To set up the server, use commands: $ dotnet restore $ dotnet build $ dotnet run
-5. To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
+5. To open web application, enter http://localhost:5000/ in any browser 
+6. To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
 ## Known Bugs
 
