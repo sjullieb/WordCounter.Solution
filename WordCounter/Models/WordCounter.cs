@@ -43,6 +43,11 @@ namespace WordCounterProject.Models
       return Repeatitions;
     }
 
+    public int GetId()
+    {
+      return Id;
+    }
+
     public static RepeatCounter Find(int id)
     {
       foreach(RepeatCounter counter in Instances)

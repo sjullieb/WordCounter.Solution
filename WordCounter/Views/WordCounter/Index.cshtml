@@ -7,15 +7,14 @@
 <h3><strong>Sentence: @Model["new"].GetSentence()</strong></h3>
 <h3><strong>Number of repetitions: @Model["new"].GetRepetiotionsNumber()</strong></h3>
 <br>
-}
-
 <h2>Previous counts:</h2>
+}
 @foreach (RepeatCounter counter in Model["all"])
 {
 <p>@counter.GetWord()<br>
 @counter.GetSentence()<br>
 @counter.GetRepetiotionsNumber()<br></p>
+<p><a href='/counters/@counter.GetId()'>Show</a></p>
 }
-
 <br>
 <a href="/counters/new">Count another word in a sentence.</a>
