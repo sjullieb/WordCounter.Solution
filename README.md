@@ -72,8 +72,16 @@ The program uses the following specifications:_
 
 ## Setup/Installation Requirements
 
-* _Please visit the GitHub repository for this project at "https://github.com/sjullieb/WordCounter.Solution"_
-* _Clone repository or download to desktop_
+Requirements Software:
+
+* Download .NET Core 1.1.4 SDK and .NET Core Runtime 1.1.2 and install them. 
+* Download Mono and install it.
+
+1. Clone this repository: $ git clone repo name
+2. Change into the work directory:: $ cd WordCounter.Solution
+3. To edit the project, open the project in your preferred text editor.
+4. To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;
+5. To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
 ## Known Bugs
 
